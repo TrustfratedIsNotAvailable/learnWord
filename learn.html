@@ -15,23 +15,25 @@
    
    <main class="w-11/12 mx-auto"> 
         <h1 class="text-2xl font-bold text-[#18181B] text-center mb-5"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+        
+        <!-- lesson button container -->
         <div id="lesson-btn-container" class="flex justify-center gap-3 mb-8">
-          <!-- lesson button container -->
-        </div>
-        <div id="lesson-container" class="bg-[#F8F8F8] rounded-md p-4">
-          <!-- default  -->
-          <div class="text-center p-[60px]">
-               <p class="mb-2 text-[13px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেননি</p>
-               <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
-          </div>
-          <!-- update lesson container  -->
         </div>
 
+        <!-- update lesson container  -->
+        <div id="lesson-container" class="grid grid-cols-3 gap-4 bg-[#F8F8F8] rounded-md p-4">
+               <!-- default  -->
+               <div class="text-center p-8 col-span-3">
+                    <p class="mb-2 text-[13px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেননি</p>
+                    <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
+               </div>
+        </div>
    </main>
-
+   
    <div id="footer-placeholder"></div>
    
 <script src="./scripts/headerFooter.js"></script>
 <script src="./scripts/lessonBtn.js"></script>
+<script src="./scripts/lesson.js"></script>
 </body>
 </html>

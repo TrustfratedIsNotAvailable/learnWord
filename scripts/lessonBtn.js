@@ -5,22 +5,29 @@ const loadLessonButton =()=>{
 }
 
 const displayLessonButton =(data)=>{
-    console.log(data);
-
-    //get container
+    // console.log(data);
+    
+    //container -> loop -> button -> append child
     const lessonBtnContainer = document.getElementById('lesson-btn-container');
-    //loop -> button -> append child
-
+    
     data.forEach(datum => {
-        console.log(datum.level_no);
+        // console.log(datum.level_no);
         const div = document.createElement('div');
         div.innerHTML=`
-        <button class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Lesson-${datum.level_no}</button>
+        <button onclick=loadLesson('${datum.level_no}') class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Lesson-${datum.level_no}</button>
         `;
+
+        // // Get the button element
+        // const button = div.querySelector('button');
+        // // Add click event listener to each button
+        // button.addEventListener('click', () => {
+        //     loadLesson(datum.level_no);  // Pass the level_no to the loadLesson function
+        // });
+
         lessonBtnContainer.appendChild(div);
     }); 
-
 }
+
 loadLessonButton();
 
 // {id: 101, level_no: 1, lessonName: 'Basic Vocabulary'} 
