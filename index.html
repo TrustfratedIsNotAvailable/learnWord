@@ -11,48 +11,27 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head> 
 <body>
-   <header>
-<!-- nav  -->
-    <nav class="flex justify-between px-12 py-5 bg-slate-200">
-        <div class="flex items-center text-[20px]"><p class="font-bold">English</p><img src="./images/logo.png" alt=""><p>জানালা</p></div>
-        <div class="flex gap-1"> 
-            <button class="btn btn-sm"><i class="fa-solid fa-circle-question"></i>FAQ</button>
-            <button class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Learn</button>
-            <button class="btn btn-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
-        </div>
-    </nav>
-<!-- banner  -->
-    <div class="flex justify-between items-center w-11/12 mx-auto">
-        <!-- content  -->
-        <div class="flex flex-col gap-5">
-            <h1 class="text-5xl font-bold text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy</h1>
-            <p class="text-[#18181B90] text-lg">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-            <div><input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="text" placeholder="Enter your name"></div>
-            <div><input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="password" placeholder="Enter five digits(e.g.12345)"></div>
-            <button class="btn bg-[#422AD5] text-white p-3 w-[120px]">Get Started</button>
-        </div>
-        <!-- img  -->
-        <img class="w-[500px] h-[500px]" src="./images/hero-student.png" alt="">
-    </div>
-   </header> 
-
+   <div id="header-placeholder"></div> 
+   
    <main>
+     <!-- banner  -->
+        <section class="flex justify-between items-center w-11/12 mx-auto">
+            <!-- content  -->
+            <div class="flex flex-col gap-5">
+                <h1 class="text-5xl font-bold text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy</h1>
+                <p class="text-[#18181B90] text-lg">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                <div><input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="text" placeholder="Enter your name"></div>
+                <div><input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="password" placeholder="Enter five digits(e.g.12345)"></div>
+                <button class="btn bg-[#422AD5] text-white p-3 w-[120px]">Get Started</button>
+            </div>
+            <!-- img  -->
+            <img class="w-[500px] h-[500px]" src="./images/hero-student.png" alt="">
+        </section>
+    
    </main>
 
-   <footer class="flex justify-between w-11/12 mx-auto items-center p-5">
-    <div>
-        <div class="flex items-center text-[20px] mb-2"><p class="font-bold">English</p><img src="./images/logo.png" alt=""><p>জানালা</p></div>
-        <p class="text-[16px] font-medium mb-2">ইংরেজি শিখুন সহজে</p>
-        <p class="text-[12px] font-regular">Providing ED-Tech Applications since 2025</p>
-    </div>
-    <div class="mt-auto">
-            <p class="text-[#18181B90]">Follow us</p>
-            <div>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div> 
-    </div>
-   </footer>
+   <div id="footer-placeholder"></div>
+   
+<script src="./scripts/header-footer.js"></script>
 </body>
 </html>
