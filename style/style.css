@@ -1,0 +1,10 @@
+.btn-blue{
+    background-color: blue;
+    color:white;
+}
+
+.btn-effect:hover{
+    background-color: white;
+    color:blue;
+    border:1px solid blue;
+}

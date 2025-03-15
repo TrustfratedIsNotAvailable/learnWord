@@ -32,7 +32,8 @@ const displayLesson =(lessons)=>{
             <p class="text-[20px] font-semibold text-[#18181B90]">'${lesson.meaning} / ${lesson.pronunciation}'</p>
         </div>
         <div class="flex justify-between px-8">
-                <button class="btn btn-sm bg-[#1A91FF10] border-none"><i class="fa-solid fa-circle-info"></i></button>
+                <!-- details show  --> 
+                <button  onclick=details('${lesson.id}') class="btn btn-sm bg-[#1A91FF10] border-none"><i class="fa-solid fa-circle-info"></i></button>
                 <button class="btn btn-sm bg-[#1A91FF10] border-none"><i class="fa-solid fa-volume-high"></i></button>
         </div>
         `;

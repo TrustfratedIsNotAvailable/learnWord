@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <!-- font awesome  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <!-- css link  -->
+     <link rel="stylesheet" href="./style/style.css">
 </head> 
 <body>
    <div id="header-placeholder"></div> 
@@ -28,6 +30,32 @@
                     <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
                </div>
         </div>
+
+        <!-- lesson pop up details  -->
+        
+     <dialog id="detail" class="modal">
+          <div id="detail-box" class="modal-box card bg-white w-96 shadow-sm">
+               <!-- <div class="card-body p-3">
+                         <h1>Eager (<i class="fa-solid fa-microphone-lines"></i> :ইগার)</h1>
+                         <p>Meaning</p>
+                         <p>আগ্রহী</p>
+                         <p>Example</p>
+                         <p>The kids were eager to open their gifts.</p>
+                         <p>সমার্থক শব্দ গুলো</p>
+                         <div id="synonym">
+                              <button></button>
+                         </div> 
+                    </div>
+                    <div class="modal-action  flex justify-start">
+                         <form method="dialog">
+          
+                         <button class="btn btn-sm btn-blue btn-effect">Complete Learning</button>
+                         </form>
+                    </div> -->
+          </div>
+          
+     </dialog>
+
    </main>
    
    <div id="footer-placeholder"></div>
@@ -35,5 +63,7 @@
 <script src="./scripts/headerFooter.js"></script>
 <script src="./scripts/lessonBtn.js"></script>
 <script src="./scripts/lesson.js"></script>
+<script src="./scripts/detail.js"></script>
 </body>
 </html>
+
