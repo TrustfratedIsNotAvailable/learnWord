@@ -20,7 +20,7 @@ const login = () =>{
             document.getElementById('password').value = "";
 
             document.getElementById('banner').classList.add("hidden");
-            document.getElementById('learn').classList.remove("hidden");
+            document.getElementById('LEARN').classList.remove("hidden");
             document.getElementById('FAQ').classList.remove("hidden");
             document.getElementById('menu').classList.remove("hidden");
         }
@@ -35,7 +35,7 @@ const login = () =>{
 
 const logOut = () =>{
     document.getElementById('banner').classList.remove("hidden");
-    document.getElementById('learn').classList.add("hidden");
+    document.getElementById('LEARN').classList.add("hidden");
     document.getElementById('FAQ').classList.add("hidden");
     document.getElementById('menu').classList.add("hidden");
 }

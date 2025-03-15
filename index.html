@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -14,38 +18,47 @@
      <!-- css  -->
      <link rel="stylesheet" href="./style/style.css">
 </head> 
-<body>
-   <div id="header-placeholder"></div> 
+<body class="inter">
+   <header class="fixed top-0 left-0 right-0 z-50" >
+        <nav id="menu" class="flex justify-between px-12 py-5 bg-slate-200 mb-[40px]  hidden">
+            <div class="flex items-center text-[20px]"><p class="font-bold">English</p><img src="./images/logo.png" alt=""><p class="hind-siliguri">জানালা</p></div>
+            <div class="flex gap-1"> 
+                <button onclick=scrollToFAQ() id="faq-btn" class="btn btn-sm btn-nav"><i class="fa-solid fa-circle-question"></i>FAQ</button>
+                <button onclick=scrollToLearn() id="learn-btn" class="btn btn-sm btn-nav"><i class="fa-solid fa-book-open"></i>Learn</button>
+                <button onclick=logOut() class="btn btn-sm btn-effect btn-nav"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+            </div>
+        </nav>
+    </header> 
    
-   <main class="w-11/12 mx-auto mb-28">
+    <main class="w-11/12 mx-auto pt-[80px] mb-28">
     <!-- banner section -->
         <section id="banner" class="flex justify-between items-center">
             <!-- content  -->
             <div class="flex flex-col gap-5">
                 <h1 class="text-5xl font-bold text-[#18181B]"><span class="text-[#00BCFF]">English</span> is Easy</h1>
-                <p class="text-[#18181B90] text-lg">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                <p class="text-[#18181B90] text-lg hind-siliguri">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
                 <input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="text" id="username" placeholder="Enter your name">
-                <input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="password" id="password" placeholder="Enter five digits(e.g.123456)">
-                <button onclick=login() class="btn bg-[#422AD5] text-white p-3 w-[120px]">Get Started</button>
+                <input class="w-[300px] p-2 border-[#18181B20] rounded-lg" type="password" id="password" placeholder="Enter login code (e.g.123456)">
+                <button onclick=login() class="btn btn-blue p-3 w-[120px]">Get Started</button>
             </div>
             <!-- img  -->
             <img class="w-[500px] h-[500px]" src="./images/hero-student.png" alt="">
         </section>
     
     <!-- Learn Vocubularies section  -->
-        <section id="learn" class="mb-20 hidden">
-            <h1 class="text-2xl font-bold text-[#18181B] text-center mb-5"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+        <section id="LEARN" class="mb-20 hidden pt-[80px]">
+            <h1 class="text-2xl font-bold text-[#18181B] text-center mb-10"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
         
             <!-- lesson button container -->
             <div id="lesson-btn-container" class="flex justify-center gap-3 mb-8">
             </div>
        
             <!-- update lesson container  -->
-            <div id="lesson-container" class="grid grid-cols-3 gap-4 bg-[#F8F8F8] rounded-md p-4">
+            <div id="lesson-container" class="grid grid-cols-3 gap-4 bg-[#F8F8F8] rounded-md">
                  <!-- default  -->
                  <div class="text-center p-8 col-span-3">
-                      <p class="mb-2 text-[13px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেননি</p>
-                      <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
+                      <p class="mb-2 text-[13px] text-[#79716B] hind-siliguri">আপনি এখনো কোন Lesson Select করেননি</p>
+                      <h1 class="text-[30px] text-[#292524] hind-siliguri">একটি Lesson Select করুন।</h1>
                  </div>
             </div>
        
@@ -64,8 +77,8 @@
         </section>
 
     <!-- FAQ section  -->
-    <section id="FAQ" class="hidden">
-        <h1 class="text-2xl font-bold text-[#18181B] text-center mb-5"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+    <section id="FAQ" class="hidden pt-[80px]">
+        <h1 class="text-2xl font-bold text-[#18181B] text-center mb-10"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
         <!-- accordian  -->
         <div class="text-[14px] flex flex-col gap-3">
           <div class="collapse collapse-plus bg-[#1A91FF10] border border-base-300">
@@ -101,14 +114,29 @@
     </section>
    </main>
 
-   <div id="footer-placeholder"></div>
+   <footer class="flex justify-between w-11/12 mx-auto items-center py-18">
+    <div>
+        <div class="flex items-center text-[20px] mb-2"><p class="font-bold">English</p><img src="./images/logo.png" alt=""><p class="hind-siliguri">জানালা</p></div>
+        <p class="text-[16px] font-medium mb-2 hind-siliguri">ইংরেজি শিখুন সহজে</p>
+        <p class="text-[12px] font-regular">Providing ED-Tech Applications since 2025</p>
+    </div>
+    <div class="mt-auto">
+            <p class="text-[#18181B90]">Follow us</p>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div> 
+    </div>
+   </footer>
    
-<script src="./scripts/headerFooter.js"></script>
 <script src="./scripts/lessonBtn.js"></script>
 <script src="./scripts/lesson.js"></script>
 <script src="./scripts/detail.js"></script>
 <script src="./scripts/loader.js"></script>
 <script src="./scripts/activeBtn.js"></script>
 <script src="./scripts/loginOut.js"></script>
+<script src="./scripts/scroll.js"></script>
 </body>
 </html>

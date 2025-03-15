@@ -15,10 +15,10 @@ const detailContent = (content) =>{
             <h1 class="text-[28px] font-semibold">${content.word} (<i class="fa-solid fa-microphone-lines"></i> :${content.pronunciation})</h1>
             <div class="text-[16px]">
                 <p class="font-semibold">Meaning</p>
-                <p class="text-[#00000080]">${content.meaning}</p>
+                <p class="text-[#00000080] hind-siliguri">${content.meaning ? content.meaning : "অর্থ পাওয়া যায়নি"}</p>
                 <p class="font-semibold">Example</p>
                 <p class="text-[#00000080]">${content.sentence}</p>
-                <p class="font-semibold">সমার্থক শব্দ গুলো</p>
+                <p class="font-semibold hind-siliguri">সমার্থক শব্দ গুলো</p>
             </div>
            
             <div id="synonym" class="flex gap-1">
@@ -50,6 +50,11 @@ const detailContent = (content) =>{
 
 }
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'en-EN'; // English
+  window.speechSynthesis.speak(utterance);
+}
 
 // id: 5
 // level: 1
