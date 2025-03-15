@@ -16,14 +16,7 @@ const displayLessonButton =(data)=>{
         div.innerHTML=`
         <button onclick=loadLesson('${datum.level_no}') class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Lesson-${datum.level_no}</button>
         `;
-
-        // // Get the button element
-        // const button = div.querySelector('button');
-        // // Add click event listener to each button
-        // button.addEventListener('click', () => {
-        //     loadLesson(datum.level_no);  // Pass the level_no to the loadLesson function
-        // });
-
+        
         lessonBtnContainer.appendChild(div);
     }); 
 }

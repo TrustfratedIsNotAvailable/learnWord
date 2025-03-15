@@ -1,4 +1,5 @@
  const loadLesson = (level) => {
+    addLoader();
     fetch(`https://openapi.programming-hero.com/api/level/${level}`)
         .then((res) => res.json())
         .then((data) => displayLesson(data.data));
@@ -6,7 +7,7 @@
 
 const displayLesson =(lessons)=>{
     // console.log(lessons);
-
+    removeLoader();
     const lessonContainer = document.getElementById('lesson-container');
     lessonContainer.innerHTML='';
 
@@ -42,6 +43,7 @@ const displayLesson =(lessons)=>{
 
     });
 }
+
 
 
 // id: 5

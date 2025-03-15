@@ -16,45 +16,33 @@
    <div id="header-placeholder-learn"></div> 
    
    <main class="w-11/12 mx-auto mb-28"> 
-        <h1 class="text-2xl font-bold text-[#18181B] text-center mb-5"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+     <h1 class="text-2xl font-bold text-[#18181B] text-center mb-5"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
         
-        <!-- lesson button container -->
-        <div id="lesson-btn-container" class="flex justify-center gap-3 mb-8">
-        </div>
+     <!-- lesson button container -->
+     <div id="lesson-btn-container" class="flex justify-center gap-3 mb-8">
+     </div>
 
-        <!-- update lesson container  -->
-        <div id="lesson-container" class="grid grid-cols-3 gap-4 bg-[#F8F8F8] rounded-md p-4">
-               <!-- default  -->
-               <div class="text-center p-8 col-span-3">
-                    <p class="mb-2 text-[13px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেননি</p>
-                    <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
-               </div>
-        </div>
+     <!-- update lesson container  -->
+     <div id="lesson-container" class="grid grid-cols-3 gap-4 bg-[#F8F8F8] rounded-md p-4">
+          <!-- default  -->
+          <div class="text-center p-8 col-span-3">
+               <p class="mb-2 text-[13px] text-[#79716B]">আপনি এখনো কোন Lesson Select করেননি</p>
+               <h1 class="text-[30px] text-[#292524]">একটি Lesson Select করুন।</h1>
+          </div>
+     </div>
 
-        <!-- lesson pop up details  -->
-        
+     <!-- lesson pop up details  --> 
      <dialog id="detail" class="modal">
           <div id="detail-box" class="modal-box card bg-white w-96 shadow-sm">
-               <!-- <div class="card-body p-3">
-                         <h1>Eager (<i class="fa-solid fa-microphone-lines"></i> :ইগার)</h1>
-                         <p>Meaning</p>
-                         <p>আগ্রহী</p>
-                         <p>Example</p>
-                         <p>The kids were eager to open their gifts.</p>
-                         <p>সমার্থক শব্দ গুলো</p>
-                         <div id="synonym">
-                              <button></button>
-                         </div> 
-                    </div>
-                    <div class="modal-action  flex justify-start">
-                         <form method="dialog">
-          
-                         <button class="btn btn-sm btn-blue btn-effect">Complete Learning</button>
-                         </form>
-                    </div> -->
-          </div>
-          
+          </div>    
      </dialog>
+
+     <!-- loading  -->
+     <div id="loader" class="text-center hidden">
+          <span class="loading loading-ball loading-sm"></span>
+          <span class="loading loading-ball loading-md"></span>
+          <span class="loading loading-ball loading-lg"></span>
+     </div>
 
    </main>
    
@@ -64,6 +52,7 @@
 <script src="./scripts/lessonBtn.js"></script>
 <script src="./scripts/lesson.js"></script>
 <script src="./scripts/detail.js"></script>
+<script src="./scripts/loader.js"></script>
 </body>
 </html>
 
