@@ -1,8 +1,13 @@
  const loadLesson = (level) => {
     addLoader();
+
     fetch(`https://openapi.programming-hero.com/api/level/${level}`)
         .then((res) => res.json())
-        .then((data) => displayLesson(data.data));
+        .then((data) => {
+            removeActiveClass();
+            document.getElementById(`btn-${level}`).classList.add("active"); // Add active class to the clicked button
+            displayLesson(data.data);
+        });
 };
 
 const displayLesson =(lessons)=>{

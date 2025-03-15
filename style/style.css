@@ -1,4 +1,5 @@
-.btn-blue{
+.btn-blue,
+.active{
     background-color: blue;
     color:white;
 }

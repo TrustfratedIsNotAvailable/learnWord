@@ -1,7 +1,9 @@
 const loadLessonButton =()=>{
     fetch('https://openapi.programming-hero.com/api/levels/all')
     .then((res)=>res.json())
-    .then((data)=>displayLessonButton(data.data));
+    .then((data)=>{
+        displayLessonButton(data.data);
+    });
 }
 
 const displayLessonButton =(data)=>{
@@ -14,7 +16,7 @@ const displayLessonButton =(data)=>{
         // console.log(datum.level_no);
         const div = document.createElement('div');
         div.innerHTML=`
-        <button onclick=loadLesson('${datum.level_no}') class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Lesson-${datum.level_no}</button>
+        <button id="btn-${datum.level_no}" onclick=loadLesson('${datum.level_no}') class="btn btn-sm"><i class="fa-solid fa-book-open"></i>Lesson-${datum.level_no}</button>
         `;
         
         lessonBtnContainer.appendChild(div);
