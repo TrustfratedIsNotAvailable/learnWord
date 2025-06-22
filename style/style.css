@@ -1,19 +1,19 @@
-.hind-siliguri{
-    font-family: "Hind Siliguri", sans-serif;
+.hind-siliguri {
+  font-family: "Hind Siliguri", sans-serif;
 }
 .inter {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .btn-blue,
 .active,
-.btn-nav:hover{
-    background-color: blue;
-    color:white;
+.btn-nav:hover {
+  background-color: blue;
+  color: white;
 }
 .btn-nav,
-.btn-blue:hover{
-    background-color: white;
-    color:blue;
-    border:1px solid blue;
+.btn-blue:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
 }
